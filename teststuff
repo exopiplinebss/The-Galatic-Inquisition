@@ -1,4 +1,28 @@
+#graphing raw data
 xy = np.loadtxt(filenameafter)
 x = xy[ : ,0]
 y = xy[ : ,1]
 z = py.plot(x,y)
+
+
+
+#more autimation to fileformating
+#this will take all files in the same folder as the program and format them so the ycna be read for later use
+#The old files will remain and the new ones will be names 'oldname.rew' where old name was the original name
+
+arr = os.listdir()
+listcount = int(len(arr))
+for a in range (0,listcount):
+    filename = arr[a]
+    f = open(filenamea,'r')
+    filedata = f.read()
+    f.close()
+    newdata = filedata.replace(", ","	")
+    newdata2 = newdata.replace(",","")
+    newdata3 = newdata2.split("\n",1)[1];
+    filenameafter = '%s.rew' %filenamea
+    f = open(filenameafter,"w")
+    print (newdata3)
+    f.write(newdata3)
+    f.truncate()
+    f.close()
