@@ -7,7 +7,7 @@ z = py.plot(x,y)
 
 
 #more autimation to fileformating
-#this will take all files in the same folder as the program and format them so the ycna be read for later use
+#this will take all files in the same folder as the program and format them so the they be read for later use
 #The old files will remain and the new ones will be names 'oldname.rew' where old name was the original name
 
 arr = os.listdir()
