@@ -1,0 +1,6 @@
+from IPython.core.display import HTML
+filenamea='401344113'
+#Replace numbers in above code with star name
+link1='<iframe src=http://simbad.u-strasbg.fr/simbad/sim-id?Ident=%'
+link2='&Name=V*+EL+Aqr&submit=display+all+measurements#lab_meas width=970 height=550><iframe>'
+HTML('%s%s%s' %(link1,filenamea,link2))
