@@ -1,0 +1,21 @@
+import math
+import numpy as np
+
+d = 1.496*10**11
+#Distance from star
+
+a = 0.30
+#Albedo of planet
+
+L = 3.827e+26
+#Luminosity of the star
+
+o = 5.670373*10**-8
+#Stefan Boltzmann Constant
+
+p = math.pi
+
+T = ((L*(1-a))/(16*p*(d**2)*o))**(1/4)
+
+print (T-273.15)
+#This should be the surface temperature of the planet in celsius, not accounting for the greenhouse effect
